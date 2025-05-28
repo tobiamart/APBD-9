@@ -1,6 +1,6 @@
 namespace CodeFirst.DTO;
 
-public class GetPatientDTO
+public class GetPatientDto
 { 
     public int IdPatient { get; set; } 
     public string FirstName { get; set; } = null!; 

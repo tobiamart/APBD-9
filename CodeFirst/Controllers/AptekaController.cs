@@ -1,6 +1,8 @@
 using CodeFirst.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using CodeFirst.DTO;
+using CodeFirst.Models;
 
 namespace CodeFirst.Controllers
 {
@@ -27,6 +29,17 @@ namespace CodeFirst.Controllers
         {
             var patient = await _dbService.GetPatientByIdAsync(idPatient);
             return Ok(patient);
+        }
+
+        [HttpPost("prescriptions")]
+        public async Task<IActionResult> AddPrescription([FromBody] CreatePrescriptionDTO dto)
+        {
+            var result = await _dbService.CreatePrescription(dto);
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return Created();
         }
     }
 }
