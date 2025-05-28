@@ -163,3 +163,4 @@
 /Users/tobiasz/Desktop/Studia/Semestr 4/APBD/CodeFirst/CodeFirst/obj/Debug/net9.0/CodeFirst.pdb
 /Users/tobiasz/Desktop/Studia/Semestr 4/APBD/CodeFirst/CodeFirst/obj/Debug/net9.0/CodeFirst.genruntimeconfig.cache
 /Users/tobiasz/Desktop/Studia/Semestr 4/APBD/CodeFirst/CodeFirst/obj/Debug/net9.0/ref/CodeFirst.dll
+/Users/tobiasz/Desktop/Studia/Semestr 4/APBD/CodeFirst/CodeFirst/obj/Debug/net9.0/CodeFirst.sourcelink.json

@@ -29,5 +29,18 @@ namespace CodeFirst.Services
                 })
                 .ToListAsync();
         }
+
+        public async Task<GetPatientDTO?> GetPatientByIdAsync(int idPatient)
+        {
+            return await _context.Patients
+                .Select(p => new GetPatientDTO
+                {
+                    IdPatient = p.IdPatient,
+                    FirstName = p.FirstName,
+                    LastName = p.LastName,
+                    Birthdate = p.Birthdate
+                })
+                .FirstOrDefaultAsync(p => p.IdPatient == idPatient);
+        }
     }
 }

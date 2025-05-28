@@ -21,5 +21,12 @@ namespace CodeFirst.Controllers
             var patients = await _dbService.GetAllPatientsAsync();
             return Ok(patients);
         }
+
+        [HttpGet("patients/{idPatient}")]
+        public async Task<IActionResult> GetPatientById(int idPatient)
+        {
+            var patient = await _dbService.GetPatientByIdAsync(idPatient);
+            return Ok(patient);
+        }
     }
 }
